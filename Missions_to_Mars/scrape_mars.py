@@ -10,7 +10,7 @@ import pandas as pd
 def scrape():
 
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
 # Scrape Latest Title and Text
 
@@ -57,18 +57,16 @@ def scrape():
 
 # Scrape Mars Facts
 
-    url = 'https://galaxyfacts-mars.com'
+    # url = 'https://galaxyfacts-mars.com'
+    # tables = pd.read_html(url)[0]
+    
 
-    tables = pd.read_html(url)[0]
-    tables
+    # # type(tables)
 
-    # type(tables)
+    # tables.columns=["Description","Mars","Earth"]
+    # tables.set_index("Description", inplace=True)
 
-    tables.columns=["Description","Mars","Earth"]
-
-    tables.set_index("Description", inplace=True)
-
-    tables.to_html()
+    # stats_table = tables.to_html()
 
 # Scrape Mars Hemispheres  Name & Url
 
