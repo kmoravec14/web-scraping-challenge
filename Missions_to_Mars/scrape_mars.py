@@ -24,7 +24,7 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     results = soup.find('div', class_='list_text')
-    # print(results)
+    print(results)
 
     title = results.find('div', class_='content_title').text
     text = results.find('div', class_='article_teaser_body').text
@@ -119,9 +119,11 @@ def scrape():
         "Title": title,
         "Text": text,
         "Featured_Img": featured_img_url,
-        "Hemishpere_Img": hemisphere_image_urls
+        "Hemispheres_Img": hemisphere_image_urls
     }
-
+    # print(mars_dict)
+    # print("------------")
+    # print(hemisphere_image_urls.title[0])
      # Quit the browser
     browser.quit()
 
