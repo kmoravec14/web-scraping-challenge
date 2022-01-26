@@ -24,8 +24,8 @@
                 <div class="media">
                     <div class="media-body">
                         <h2>Latest Mars News</h2>
-                        <h4 class="media-heading">{{ mars.news_title }}</h4>
-                        <p>{{ mars.news_paragraph }}</p>
+                        <h4 class="media-heading">{{ mars.Title }}</h4>
+                        <p>{{ mars.Text }}</p>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
 
                 <!-- if images is False/None/non-existent, then default to error message -->
 
-                <img src="{{mars.featured_image | default('https://www.nasa.gov/sites/default/files/thumbnails/image/i1615ay.jpg' , true) }} " class="img-responsive " alt="Responsive image " />
+                <img src="{{mars.Featured_Img | default('https://www.nasa.gov/sites/default/files/thumbnails/image/i1615ay.jpg' , true) }} " class="img-responsive " alt="Responsive image " />
                 <!-- <img src="{{mars.featured_image | default( 'static/images/error.png', true) }} " class="img-responsive " alt="Responsive image " /> -->
             </div>
 

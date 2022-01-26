@@ -121,9 +121,11 @@ def scrape():
         "Featured_Img": featured_img_url,
         "Hemispheres_Img": hemisphere_image_urls
     }
+    
+    # print('-------------')
     # print(mars_dict)
-    # print("------------")
-    # print(hemisphere_image_urls.title[0])
+    # print('-------------')
+
      # Quit the browser
     browser.quit()
 
